@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perestrojka Fest 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=D-DIN+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'D-DIN Condensed', sans-serif;
+      background: url('Sfondo-01.svg') no-repeat center center fixed;
+      background-size: cover;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    header {
+      margin-top: 0;
+    }
+
+    header img {
+      max-width: 90%;
+      height: auto;
+      margin-top: 0;
+    }
+
+    .subtitle {
+      font-weight: 300;
+      font-size: 4.5rem;
+      margin: 0.5rem 0 1.5rem;
+      letter-spacing: 0.5rem;
+    }
+
+    .dates {
+      font-size: 2.5rem;
+      margin: 0.2rem 0;
+    }
+
+    .location {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      font-size: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    nav a {
+      color: black;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .nav-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .highlighted-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-weight: bold;
+    }
+
+    .highlighted-line::before,
+    .highlighted-line::after {
+      content: "";
+      flex: 1;
+      height: 2px;
+      background: black;
+      max-width: 500px;
+    }
+
+    footer img {
+      margin-top: 3rem;
+      max-width: 150px;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 4px solid white;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      font-size: 2.5rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .subtitle {
+        font-size: 2.8rem;
+        letter-spacing: 0.3rem;
+      }
+
+      .dates {
+        font-size: 1.5rem;
+      }
+
+      .location {
+        font-size: 1.2rem;
+      }
+
+      nav {
+        font-size: 1.2rem;
+        gap: 1.5rem;
+      }
+
+      .highlighted-line::before,
+      .highlighted-line::after {
+        max-width: 160px;
+      }
+
+      footer img {
+        max-width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Titolo-01.svg" alt="Perestrojka Fest 2025" />
+    <div class="subtitle">TERRE RIBELLI</div>
+    <div class="dates">21 / 22 / 23 AGOSTO</div>
+    <div class="location">PIAZZOLA - CASTELLO DELL’ACQUA (SO)</div>
+  </header>
+
+  <nav>
+    <div class="nav-group">
+      <a onclick="showOverlay('musica.png')">MUSICA</a>
+      <a onclick="showOverlay('camping.jpg')">FREE CAMPING</a>
+      <a onclick="showOverlay('arte.jpg')">ARTE</a>
+      <a onclick="showOverlay('stand.jpg')">STAND</a>
+      <a onclick="showOverlay('cultura.jpg')">CULTURA</a>
+    </div>
+    <div class="highlighted-line">INGRESSO GRATUITO</div>
+    <a onclick="showOverlay('bar.jpg')">BAR E CUCINA TUTTI I GIORNI (PRANZO E CENA)</a>
+  </nav>
+
+  <footer>
+    <img src="logo-perestrojka.png" alt="Logo Perestrojka" />
+  </footer>
+
+  <div id="overlay" class="overlay" onclick="hideOverlay()">
+    <span class="close-btn">&times;</span>
+    <img id="overlay-img" src="" alt="immagine" />
+  </div>
+
+  <script>
+    function showOverlay(imgFile) {
+      document.getElementById('overlay-img').src = imgFile;
+      document.getElementById('overlay').style.display = 'flex';
+    }
+
+    function hideOverlay() {
+      document.getElementById('overlay').style.display = 'none';
+      document.getElementById('overlay-img').src = '';
+    }
+  </script>
+</body>
+</html>
+
