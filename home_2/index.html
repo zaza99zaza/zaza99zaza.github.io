@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <title>Perestrojka Fest 2025</title>
+  <link rel="stylesheet" type="text/css" href="stile.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=D-DINCondensed-Bold"/>
+</head>
+<body>
+  <div id="data">
+    <h1>21/22/23 AGOSTO</h1>
+  </div>
+  <div id="luogo">
+    <h1>PIAZZOLA - CASTELLO DELL'ACQUA (SO)</h1>
+  </div>
+  <div id="perestrojkafest2025">
+    <img src="img/titolo.svg" alt="Perestrojka Fest 2025">
+  </div>
+  <div id="terreribelli">
+    <span>T</span><span>E</span><span>R</span><span>R</span><span>E</span><span> </span>
+    <span>R</span><span>I</span><span>B</span><span>E</span><span>L</span><span>L</span><span>I</span>
+  </div>
+  <div id="intro">
+    <span>MUSICA</span>
+    <h2>----------------</h2>
+    <span>FREE CAMPING</span>
+    <h2>----------------</h2>
+    <span>ARTE</span>
+    <h2>----------------</h2>
+    <span>STAND</span>
+    <h2>----------------</h2>
+    <span>CULTURA</span>
+  </div>
+  <div id="intro">
+    <h2>----------------------------------------------------------------</h2>
+    <span>INGRESSO LIBERO</span>
+    <h2>----------------------------------------------------------------</h2>
+  </div>
+  <div id="intro">
+    <h2>------------------------------------------------</h2>
+    <span>BAR E CUCINA TUTTI I GIORNI (PRANZO E CENA)</span>
+    <h2>------------------------------------------------</h2>
+  </div>
+
+
+  
+  <div id="intro" class="download">
+  <span>Se il download non parte in automatico, <a href="guida_perestrojka_festival.pdf" download>Clicca qui per scaricare la tua guida</a>.</span>
+</div>
+
+  <div id="footer">
+    <a class="instagram" href="https://www.instagram.com/_perestrojka/" target="_blank" aria-label="Instagram"></a>
+  </div>
+
+  <script>
+    window.onload = function () {
+      const link = document.createElement('a');
+      link.href = 'guida_perestrojka_festival.pdf';
+      link.download = 'guida_perestrojka_festival.pdf';
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+  </script>
+</body>
+</html>

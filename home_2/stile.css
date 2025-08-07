@@ -1,0 +1,228 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background-image: url(img/Sfondo.svg);
+	background-size: 100%;
+	margin: 30px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+   font-family: 'D-DIN';
+   src: url(font/D-DINCondensed.otf);
+}
+
+@font-face {
+   font-family: 'D-DIN';
+   src: url(font/D-DINCondensed-Bold.otf);
+}
+
+#data {
+	width: 50%;
+	float: left;
+	text-align: left;
+}
+
+#luogo {
+	width: 50%;
+	float: right;
+	text-align: right;
+}
+
+h1 {
+	font-size: 30px;
+	font-family: "D-DIN";
+	font-weight: bold;
+}
+
+#perestrojkafest2025 {
+	width: 100%;
+	margin-top: 30px;
+	float: left;
+	clear: both;
+}
+
+#terreribelli {
+	width: 100%;
+	margin-top: 30px;
+	float: left;
+	clear: both;
+    display: flex;
+    justify-content: space-between;
+	font-size: 90px;
+	font-family: "D-DIN";
+	font-weight: normal;
+	line-height: 60px;
+	text-align: justify;
+	text-align-last: justify;
+}
+
+#intro {
+	width: 100%;
+	margin-top: 30px;
+	float: left;
+	clear: both;
+    display: flex;
+    justify-content: space-between;
+	font-size: 30px;
+	font-family: "D-DIN";
+	font-weight: bold;
+	text-align: justify;
+	text-align-last: justify;
+}
+
+h2 {
+	font-size: 30px;
+	font-family: "D-DIN";
+	font-weight: bold;
+	line-height: 30px;
+	text-align: justify;
+	text-align-last: justify;
+	letter-spacing: -6px;
+}
+
+#footer {
+	width: all;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	clear: both;
+}
+
+#footer a {
+	width: 43px;
+	height: 43px;
+	float: left;
+}
+
+.instagram {
+	background-image: url(img/instagram.png);
+	background-size: 100%;
+	background-position: center center;
+	margin-left: 43px;
+	transition: background-image .2s;
+}
+
+.instagram:hover {
+	background-image: url(img/instagramhover.png);
+	background-size: 100%;
+	background-position: center center;
+}
+
+.tornaindietroscarica {
+	height: 43px;
+	width: 777px;
+	margin: 43px auto;
+}
+
+.tornaindietro {
+	width: 43px;
+	height: 43px;
+	float: left;
+	clear: both;
+	background-image: url(img/frecciasx.png);
+	background-size: 100%;
+	background-position: center center;
+	transition: background-image .2s;
+}
+
+.tornaindietro:hover {
+	background-image: url(img/frecciasxhover.png);
+	background-size: 100%;
+	background-position: center center;
+}
+
+.scarica {
+	width: 43px;
+	height: 43px;
+	float: right;
+	background-image: url(img/frecciadownload.png);
+	background-size: 100%;
+	background-position: center center;
+	transition: background-image .2s;
+}
+
+.scarica:hover {
+	background-image: url(img/frecciadownloadhover.png);
+	background-size: 100%;
+	background-position: center center;
+}
+
+@media screen and (max-width: 831px) {
+
+	#wrapper {
+		width: 554px;
+		margin: 0 auto;
+	}
+
+	.tornaindietroscarica {
+		height: 43px;
+		width: 500px;
+		margin: 43px auto;
+	}
+}
+
+@media screen and (max-width: 554px) {
+
+	#wrapper {
+		width: 277px;
+		margin: 0 auto;
+	}
+
+	.tornaindietroscarica {
+		height: 43px;
+		width: 223px;
+		margin: 43px auto;
+	}
+}
+
+
+#intro.download {
+  margin-top: 60px; /* o quanto vuoi per tirarlo giù */
+  text-align: center;
+}
+
+#intro.download a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: bold; /* opzionale */
+}
+
