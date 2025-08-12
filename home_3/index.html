@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perestrojka Fest 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=D-DIN+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'D-DIN Condensed', sans-serif;
+      background: url('Sfondo-01.svg') no-repeat center center fixed;
+      background-size: cover;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100svh;
+      text-align: center;
+    }
+
+    .main-image {
+      display: block;
+      margin: 0;
+      max-width: 90vw;
+      width: 100%;
+      height: auto;
+    }
+
+    .download-link {
+      margin-top: 2.5rem;   /* 🔹 più spazio sopra */
+      margin-bottom: 5rem;  /* 🔹 più spazio sotto */
+      font-size: 1.6rem;    /* 🔹 più grande */
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: black;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .download-link {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      const link = document.createElement('a');
+      link.href = 'guida_perestrojka_festival.pdf';
+      link.download = 'guida_perestrojka_festival.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+  </script>
+</head>
+<body>
+  <img src="home.svg" alt="Perestrojka Fest 2025" class="main-image" loading="eager" />
+
+  <a class="download-link" href="guida_perestrojka_festival.pdf" download>
+    Se il download non è partito automaticamente, clicca qui per scaricare la guida del festival
+  </a>
+</body>
+</html>
