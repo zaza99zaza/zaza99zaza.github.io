@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Perestrojka Fest 2025</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,62 +18,42 @@
       color: black;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
-      height: 100vh;
+      justify-content: flex-start;
+      min-height: 100svh;
       text-align: center;
     }
 
-    header {
-      margin-top: 2rem;
-    }
-
-    header img {
-      max-width: 90%;
-      height: auto;
-    }
-
-    .subtitle {
-      font-weight: 300;
-      font-size: 3.5rem;
-      letter-spacing: 0.4rem;
-      margin-top: 1rem;
-    }
-
-    footer {
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    footer img {
-      max-width: 150px;
-      height: auto;
-    }
-
-    a.download-link {
+    .main-image {
       display: block;
-      margin-top: 1rem;
-      font-size: 1.2rem;
+      margin: 0;
+      max-width: 90vw;
+      width: 100%;
+      height: auto;
+    }
+
+    .download-link {
+      margin-top: 2.5rem;   /* 🔹 più spazio sopra */
+      margin-bottom: 5rem;  /* 🔹 più spazio sotto */
+      font-size: 1.6rem;    /* 🔹 più grande */
+      font-weight: 700;
+      letter-spacing: 0.03em;
       color: black;
       text-decoration: underline;
+      cursor: pointer;
     }
 
     @media (max-width: 600px) {
-      .subtitle {
-        font-size: 2.2rem;
-        letter-spacing: 0.2rem;
-      }
-
-      footer img {
-        max-width: 100px;
+      .download-link {
+        font-size: 1.4rem;
       }
     }
   </style>
   <script>
     window.onload = function() {
       const link = document.createElement('a');
-      link.href = 'guida_festival.pdf';
-      link.download = 'guida_festival.pdf';
+      link.href = 'guida_perestrojka_festival.pdf';
+      link.download = 'guida_perestrojka_festival.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -80,16 +61,10 @@
   </script>
 </head>
 <body>
-  <header>
-    <img src="Titolo-01.svg" alt="Perestrojka Fest 2025" />
-    <div class="subtitle">TERRE RIBELLI</div>
-  </header>
+  <img src="home.svg" alt="Perestrojka Fest 2025" class="main-image" loading="eager" />
 
-  <footer>
-    <img src="logo-perestrojka.png" alt="Logo Perestrojka" />
-    <a class="download-link" href="guida_festival.pdf" download>
-      Clicca qui se il download non parte
-    </a>
-  </footer>
+  <a class="download-link" href="guida_perestrojka_festival.pdf" download>
+    Se il download non è partito automaticamente, clicca qui per scaricare la guida del festival
+  </a>
 </body>
 </html>
